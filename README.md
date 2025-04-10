@@ -30,7 +30,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 🧠 Skills Applied
+## Skills Applied
 - Data Cleaning  
 - Data Wrangling  
 - Data Visualization  
@@ -40,7 +40,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 📂 Source and Deliverables
+## Source and Deliverables
 - **Input File (.csv)**: [Download here](https://drive.google.com/drive/folders/1jGGJzeLx9-E-4s6ohIHM1cVIWDN24JSS?usp=sharing)  
 - **Cleaned Output File (.csv)** – Processed in R: [Download here](https://drive.google.com/drive/folders/15mr06VAaeir2LQo6PIxK38_aNKjl6g72?usp=sharing)  
 - **R Markdown File (.Rmd)**: [Download here](https://drive.google.com/drive/folders/1Jcsns2wbnbfWCxsGvWuTjUqtxXyH8gQO?usp=drive_link)  
@@ -50,7 +50,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 📊 Summary of Analysis  
+## Summary of Analysis  
 
 - **Annual members** ride more frequently and mostly on **weekdays**.
 - **Casual riders** have **longer ride durations** and prefer **weekends**.
@@ -58,7 +58,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## ✅ Recommendations  
+## Recommendations  
 
 1. **Incentivize frequent casual riders** with time-limited offers to convert them into members.  
 2. **Promote weekend-exclusive deals** tailored for casual riders based on their preferred usage days.  
@@ -66,7 +66,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 📈 Key Visualizations  
+## Key Visualizations  
 
 
 - Number of Rides by Rider Type and Weekday
@@ -79,7 +79,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 📦 Final Deliverables  
+## Final Deliverables  
 - Detailed Analysis using R  
 - Cleaned and aggregated datasets
 - 
@@ -88,7 +88,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 📜 Full R Markdown Code (Inline Summary)
+## Full R Markdown Code (Inline Summary)
 
 
 # Case Study R Markdown Setup
@@ -221,11 +221,11 @@ write.csv(counts, "avg_ride_length.csv")
 
 ```
 
-# 🧾 Summary for Recruiters
+# Summary for Recruiters
 This project demonstrates my ability to carry out a full data analysis cycle using R — including cleaning, transformation, visualization, and deriving business insights. I followed the six-step process: Ask, Prepare, Process, Analyze, Share, and Act. The final recommendations aim to drive actionable marketing decisions for Cyclistic's growth.
 
 
-## 🧾 Connect with Me
+## Connect with Me
 -📧 avmohaneee@gmail.com
 -💼 [LinkedIn](https://www.linkedin.com/services/page/055039336401562023)
 -💻 [GitHub](https://github.com/iammohan8)
