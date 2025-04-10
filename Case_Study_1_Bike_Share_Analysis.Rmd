@@ -1,0 +1,187 @@
+---
+title: "Case Study 1_How does a bike-share navigate speedy success"
+author: "mohan"
+date: "2025-04-08"
+output: html_document
+---
+
+---
+title: "Case Study 1: How Does a Bike-Share Navigate Speedy Success"
+author: "Mohan"
+date: "2025-04-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install and Load Packages
+
+```{r packages}
+install.packages("tidyverse")
+library(tidyverse)
+
+install.packages("conflicted")
+library(conflicted)
+conflict_prefer("filter", "dplyr")
+conflict_prefer("lag", "dplyr")
+```
+
+## Load and Inspect Data
+
+```{r load-data}
+q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv")
+q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv")
+
+# Rename columns in q1_2019 to match q1_2020
+q1_2019 <- rename(q1_2019,
+                  ride_id = trip_id,
+                  rideable_type = bikeid,
+                  started_at = start_time,
+                  ended_at = end_time,
+                  start_station_name = from_station_name,
+                  start_station_id = from_station_id,
+                  end_station_name = to_station_name,
+                  end_station_id = to_station_id,
+                  member_casual = usertype)
+```
+
+## Merge and Clean Data
+
+```{r merge-clean}
+# Standardize column types
+q1_2019 <- mutate(q1_2019,
+                  ride_id = as.character(ride_id),
+                  rideable_type = as.character(rideable_type))
+
+# Combine datasets
+all_trips <- bind_rows(q1_2019, q1_2020)
+
+# Remove unnecessary columns
+all_trips <- all_trips %>% 
+  select(-c(start_lat, start_lng, end_lat, end_lng, birthyear, gender, tripduration))
+
+# Recode member types
+all_trips <- all_trips %>% 
+  mutate(member_casual = recode(member_casual, "Subscriber" = "member", "Customer" = "casual"))
+```
+
+## Add Time Columns
+
+```{r datetime}
+all_trips <- all_trips %>% 
+  mutate(date = as.Date(started_at),
+         month = format(date, "%m"),
+         day = format(date, "%d"),
+         year = format(date, "%Y"),
+         day_of_week = format(date, "%A"),
+         ride_length = as.numeric(difftime(ended_at, started_at)))
+```
+
+## Clean Ride Data
+
+```{r ride-clean}
+all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$ride_length < 0), ]
+```
+
+## Descriptive Statistics
+
+```{r statistics}
+summary(all_trips_v2$ride_length)
+
+aggregate(ride_length ~ member_casual, data = all_trips_v2, FUN = mean)
+aggregate(ride_length ~ member_casual + day_of_week, data = all_trips_v2, FUN = mean)
+```
+
+## Weekly Ride Patterns
+
+```{r weekday-patterns}
+library(lubridate)
+
+all_trips_v2$day_of_week <- ordered(all_trips_v2$day_of_week, 
+                                    levels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"))
+
+all_trips_v2 %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>% 
+  group_by(member_casual, weekday) %>% 
+  summarise(number_of_rides = n(), average_duration = mean(ride_length)) %>% 
+  arrange(member_casual, weekday)
+```
+
+## Visualization: Number of Rides by Weekday
+
+```{r plot1}
+library(ggplot2)
+library(scales)
+
+all_trips_v2 %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>% 
+  group_by(member_casual, weekday) %>% 
+  summarise(number_of_rides = n()) %>% 
+  ggplot(aes(x = weekday, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = comma) +
+  labs(title = "Number of Rides by Rider Type and Weekday", x = "Day of the Week", y = "Number of Rides") +
+  theme_minimal()
+```
+
+## Visualization: Average Ride Duration by Weekday
+
+```{r plot2}
+all_trips_v2 %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>% 
+  group_by(member_casual, weekday) %>% 
+  summarise(average_duration = mean(ride_length)) %>% 
+  ggplot(aes(x = weekday, y = average_duration, fill = member_casual)) +
+  geom_col(position = "dodge") +
+  labs(title = "Average Ride Duration by Rider Type and Weekday", x = "Day of the Week", y = "Average Duration (Minutes)") +
+  theme_minimal()
+```
+
+## Save Processed Data
+
+```{r export-csv}
+counts <- aggregate(ride_length ~ member_casual + day_of_week, data = all_trips_v2, FUN = mean)
+write.csv(counts, file = "avg_ride_length.csv")
+write.csv(all_trips_v2, file = "all_trips_v2.csv")
+```
+
+## Pie Chart: Distribution by Rider Type
+
+```{r piechart}
+all_trips_v2 %>%
+  group_by(member_casual) %>%
+  summarise(number_of_rides = n()) %>%
+  ggplot(aes(x = "", y = number_of_rides, fill = member_casual)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y") +
+  labs(title = "Distribution of Rides by Rider Type") +
+  theme_minimal()
+```
+
+## Line Graph: Avg Ride Duration Over Time
+
+```{r time-series}
+library(lubridate)
+
+all_trips_v2 %>%
+  mutate(month = floor_date(started_at, "month")) %>%
+  group_by(month) %>%
+  summarise(average_duration = mean(ride_length, na.rm = TRUE)) %>%
+  ggplot(aes(x = month, y = average_duration)) +
+  geom_line(color = "blue", size = 1) +
+  labs(title = "Average Ride Duration Over Time", x = "Month", y = "Average Duration (Minutes)") +
+  theme_minimal()
+```
+
+## Boxplot: Ride Duration by Rider Type
+
+```{r boxplot}
+all_trips_v2 %>%
+  ggplot(aes(x = member_casual, y = ride_length, fill = member_casual)) +
+  geom_boxplot() +
+  labs(title = "Ride Duration by Rider Type", x = "Rider Type", y = "Ride Duration (Minutes)") +
+  theme_minimal()
+
+```
