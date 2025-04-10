@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [Project Overview](#📌-Project-Overview)  
-- [Tools Used](#tools-used)  
+- [Tools Used](#🛠️-tools-used)  
 - [Skills Applied](#skills-applied)  
 
 
