@@ -11,6 +11,7 @@
 ## Project Overview
 This project is part of the Google Data Analytics Capstone. It analyzes Cyclistic’s bike-share data to compare casual riders and annual members, aiming to provide actionable insights for increasing membership subscriptions.
 
+![Rplot-4](https://github.com/user-attachments/assets/abdf7caf-fee3-45d4-830e-6006dfed76e0)
 ---
 
 ## Tools Used
@@ -59,19 +60,16 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ## Key Visualizations  
 
-
-- Number of Rides by Rider Type and Weekday
-  [1_Bar Chart Number of Rides by Rider Type and Weekday.pdf](https://github.com/user-attachments/files/19686178/1_Bar.Chart.Number.of.Rides.by.Rider.Type.and.Weekday.pdf)
-
-
-
-- Average Ride Duration by Weekday
-
-  
-- Pie Chart: Rider Type Distribution  
-- Line Graph: Avg Ride Duration Over Time  
-- Boxplot: Ride Duration by Rider Type  
-
+![Rplot-1](https://github.com/user-attachments/assets/54a4f6f0-c43e-4002-b854-772d08936f67)
+---
+![Rplot-2](https://github.com/user-attachments/assets/e432e821-3ba5-4686-b580-f745fcbbfdb5)
+---
+![Rplot-3](https://github.com/user-attachments/assets/3fff0034-b04d-4a2b-978c-5a704ef1911d)
+---
+![Rplot-5](https://github.com/user-attachments/assets/2c3403b1-3a76-45e8-b5bb-4f1bafe918b4)
+---
+![Rplot-6](https://github.com/user-attachments/assets/5ec44314-41e1-44f8-ac0d-883a73c75d7f)
+---
 ---
 
 ## Final Deliverables  
