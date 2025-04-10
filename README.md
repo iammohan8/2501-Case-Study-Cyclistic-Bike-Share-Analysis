@@ -1,4 +1,4 @@
-# 🚲 Cyclistic Bike Share Analysis – Case Study 1  
+# 🚲 Cyclistic Bike Share Analysis – Case Study  
 **Author:** Mohan Anbazhagan  
 **Date:** April 8, 2025
 
