@@ -10,12 +10,12 @@
 - [Project Overview](#project-overview)
 
 
-## 📌 Project Overview 
+## 📌 Project Overview
 This project is part of the Google Data Analytics Capstone. It analyzes Cyclistic’s bike-share data to compare casual riders and annual members, aiming to provide actionable insights for increasing membership subscriptions.
 
 ---
 
-## 🛠️ Tools Used  
+## 🛠️ Tools Used
 - R & RStudio  
 - tidyverse (dplyr, ggplot2, lubridate, scales)  
 - R Markdown  
@@ -23,7 +23,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 🧠 Skills Applied  
+## 🧠 Skills Applied
 - Data Cleaning  
 - Data Wrangling  
 - Data Visualization  
@@ -33,7 +33,7 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ---
 
-## 📂 Source and Deliverables  
+## 📂 Source and Deliverables
 - **Input File (.csv)**: [Download here](https://drive.google.com/drive/folders/1jGGJzeLx9-E-4s6ohIHM1cVIWDN24JSS?usp=sharing)  
 - **Cleaned Output File (.csv)** – Processed in R: [Download here](https://drive.google.com/drive/folders/15mr06VAaeir2LQo6PIxK38_aNKjl6g72?usp=sharing)  
 - **R Markdown File (.Rmd)**: [Download here](https://drive.google.com/drive/folders/1Jcsns2wbnbfWCxsGvWuTjUqtxXyH8gQO?usp=drive_link)  
