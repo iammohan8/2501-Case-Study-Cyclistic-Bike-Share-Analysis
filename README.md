@@ -88,9 +88,7 @@ install.packages("conflicted")
 library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
-
-
----
+```
 
 ## Load and Clean Data
 
@@ -124,10 +122,8 @@ all_trips <- all_trips %>%
     "Subscriber" = "member",
     "Customer" = "casual"
   ))
+```
 
-
-
----
 
 ## Feature Engineering
 
@@ -145,7 +141,7 @@ all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$
 
 
 
----
+```
 
 ## Descriptive Stats
 
@@ -154,7 +150,7 @@ summary(all_trips_v2$ride_length)
 aggregate(ride_length ~ member_casual, data = all_trips_v2, FUN = mean)
 
 
----
+```
 
 ## Weekly Trends
 
@@ -165,7 +161,7 @@ all_trips_v2$day_of_week <- ordered(all_trips_v2$day_of_week,
 )
 
 
----
+```
 
 ## Visualizations
 
@@ -185,7 +181,7 @@ all_trips_v2 %>%
 
 
 
----
+```
 
 ## Install and Load Packages
 
@@ -198,7 +194,7 @@ conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
 
----
+```
 
 ## Save Processed Data
 
@@ -208,12 +204,13 @@ counts <- aggregate(ride_length ~ member_casual + day_of_week, data = all_trips_
 write.csv(counts, "avg_ride_length.csv")
 
 
----
+```
 
 # 🧾 Summary for Recruiters
 This project demonstrates my ability to carry out a full data analysis cycle using R — including cleaning, transformation, visualization, and deriving business insights. I followed the six-step process: Ask, Prepare, Process, Analyze, Share, and Act. The final recommendations aim to drive actionable marketing decisions for Cyclistic's growth.
 
-##🧾 Connect with Me
+
+## 🧾 Connect with Me
 -📧 avmohaneee@gmail.com
 -💼 [LinkedIn](https://www.linkedin.com/services/page/055039336401562023)
 -💻 [GitHub](https://github.com/iammohan8)
