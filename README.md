@@ -61,9 +61,13 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 
 - Number of Rides by Rider Type and Weekday
-  
+  [1_Bar Chart Number of Rides by Rider Type and Weekday.pdf](https://github.com/user-attachments/files/19686178/1_Bar.Chart.Number.of.Rides.by.Rider.Type.and.Weekday.pdf)
 
-- Average Ride Duration by Weekday  
+
+
+- Average Ride Duration by Weekday
+
+  
 - Pie Chart: Rider Type Distribution  
 - Line Graph: Avg Ride Duration Over Time  
 - Boxplot: Ride Duration by Rider Type  
