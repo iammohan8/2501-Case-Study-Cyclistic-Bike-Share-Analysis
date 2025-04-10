@@ -4,8 +4,7 @@
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)  
-- [Tools Used](#tools-used)  
+- [Project Overview](#project-overview)  - [Tools Used](#tools-used)  
 - [Skills Applied](#skills-applied)  
 - [Source and Deliverables](#source-and-deliverables)  
 - [Summary of Analysis](#summary-of-analysis)  
