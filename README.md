@@ -2,7 +2,13 @@
 **Author:** Mohan Anbazhagan  
 **Date:** April 8, 2025
 
-## 📌 Introduction  
+## Table of Contents
+
+- [Introduction](#project-overview)
+- 
+
+
+## 📌 Project Overview 
 This project is part of the Google Data Analytics Capstone. It analyzes Cyclistic’s bike-share data to compare casual riders and annual members, aiming to provide actionable insights for increasing membership subscriptions.
 
 ---
