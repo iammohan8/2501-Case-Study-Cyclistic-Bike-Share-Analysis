@@ -11,8 +11,10 @@
 ## Project Overview
 This project is part of the Google Data Analytics Capstone. It analyzes Cyclistic’s bike-share data to compare casual riders and annual members, aiming to provide actionable insights for increasing membership subscriptions.
 
-![Rplot-4](https://github.com/user-attachments/assets/abdf7caf-fee3-45d4-830e-6006dfed76e0)
+![Rplot-4](https://github.com/user-attachments/assets/97dc8475-9192-4bd6-a61c-64edd158e24f)
 ---
+
+
 
 ## Tools Used
 - R & RStudio  
@@ -60,22 +62,20 @@ This project is part of the Google Data Analytics Capstone. It analyzes Cyclisti
 
 ## Key Visualizations  
 
-![Rplot-1](https://github.com/user-attachments/assets/54a4f6f0-c43e-4002-b854-772d08936f67)
+![Rplot-1](https://github.com/user-attachments/assets/938988b0-87e5-4426-93ba-ca785daa689f)
 ---
-![Rplot-2](https://github.com/user-attachments/assets/e432e821-3ba5-4686-b580-f745fcbbfdb5)
+![Rplot-2](https://github.com/user-attachments/assets/7302618f-df19-4cd9-8737-3dc5b1321dc1)
 ---
-![Rplot-3](https://github.com/user-attachments/assets/3fff0034-b04d-4a2b-978c-5a704ef1911d)
+![Rplot-3](https://github.com/user-attachments/assets/7dc1756c-d401-49e0-9410-942e29a8e681)
 ---
-![Rplot-5](https://github.com/user-attachments/assets/2c3403b1-3a76-45e8-b5bb-4f1bafe918b4)
+![Rplot-5](https://github.com/user-attachments/assets/f12a1fca-82de-446f-aa5f-e3ac11f773ad)
 ---
-![Rplot-6](https://github.com/user-attachments/assets/5ec44314-41e1-44f8-ac0d-883a73c75d7f)
----
+![Rplot-6](https://github.com/user-attachments/assets/7588ad9a-6f4b-470e-afca-18bad452db65)
 ---
 
 ## Final Deliverables  
 - Detailed Analysis using R  
 - Cleaned and aggregated datasets
-- 
 - Visualizations showing behavioral trends  
 - Business strategy recommendations  
 
