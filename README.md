@@ -4,9 +4,16 @@
 
 ## Table of Contents
 
-- [📌 Project Overview](#project-overview)
-- [Tools Used](#🛠️-tools-used)  
-- [Skills Applied](#skills-applied)  
+- [📌 Project Overview](#project-overview)  
+- [🛠️ Tools Used](#tools-used)  
+- [🧠 Skills Applied](#skills-applied)  
+- [📂 Source and Deliverables](#source-and-deliverables)  
+- [📊 Summary of Analysis](#summary-of-analysis)  
+- [✅ Recommendations](#recommendations)  
+- [📈 Key Visualizations](#key-visualizations)  
+- [📦 Final Deliverables](#final-deliverables)  
+- [📜 Full R Markdown Code (Inline Summary)](#full-r-markdown-code-inline-summary)  
+- [🧾 Summary for Recruiters](#summary-for-recruiters)
 
 
 
